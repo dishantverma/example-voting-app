@@ -42,6 +42,7 @@ async.retry(
       return console.error("Giving up");
     }
     console.log("Connected to db");
+    console.log("trying to get votes table");
     getVotes(client);
   }
 );

@@ -46,7 +46,8 @@ class Worker {
   }
 
   static Jedis connectToRedis(String host) {
-    Jedis conn = new Jedis(host);
+    Jedis conn = new Jedis(host, 6379);
+    conn.auth("redis_password")
 
     while (true) {
       try {

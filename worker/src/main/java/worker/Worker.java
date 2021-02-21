@@ -88,7 +88,7 @@ class Worker {
       e.printStackTrace();
       System.exit(1);
     }
-
+    System.err.println(url);
     System.err.println("Connected to db");
     return conn;
   }

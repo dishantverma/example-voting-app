@@ -36,6 +36,7 @@ class Worker {
 
     try {
       insert.executeUpdate();
+       System.err.println("vote data inserted in votes table");
     } catch (SQLException e) {
       PreparedStatement update = dbConn.prepareStatement(
         "UPDATE votes SET vote = ? WHERE id = ?");
